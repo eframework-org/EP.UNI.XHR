@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "experimentalDecorators": true,
+        "module": "ES2015",
+        "target": "ES2015",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "outDir": "dist",
+        "typeRoots": [
+            "node_modules/ep.uni.util/types"
+        ]
+    },
+    "exclude": [
+        "dist",
+        "node_modules",
+    ]
+}

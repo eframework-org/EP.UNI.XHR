@@ -1,0 +1,74 @@
+{
+  "name": "ep.uni.xhr",
+  "displayName": "EP.UNI.XHR",
+  "description": "Package UNI.XHR implements XMLHttpRequest for Puerts in Unity, Unreal, etc.",
+  "version": "0.0.1",
+  "author": "eframework-org",
+  "homepage": "https://github.com/eframework-org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eframework-org/EP.UNI.XHR.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eframework",
+    "package",
+    "uni",
+    "puer",
+    "puerts",
+    "unity",
+    "unreal",
+    "xhr",
+    "xmlhttprequest"
+  ],
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "exports": {
+    "./unity": {
+      "require": "./dist/unity/index.cjs",
+      "import": "./dist/unity/index.mjs",
+      "types": "./dist/unity/index.d.ts"
+    },
+    "./unreal": {
+      "require": "./dist/unreal/index.cjs",
+      "import": "./dist/unreal/index.mjs",
+      "types": "./dist/unreal/index.d.ts"
+    },
+    "./test": {
+      "require": "./dist/test/index.cjs",
+      "import": "./dist/test/index.mjs",
+      "types": "./dist/test/index.d.ts"
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "28.0.1",
+    "@rollup/plugin-node-resolve": "15.3.0",
+    "@rollup/plugin-typescript": "12.1.2",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.11.7",
+    "@types/url-parse": "1.4.11",
+    "ep.uni.util": "0.0.2",
+    "jest": "27.2.0",
+    "rollup": "2.79.1",
+    "rollup-plugin-dts": "4.2.3",
+    "rollup-plugin-sourcemaps": "0.6.3",
+    "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-typescript2": "0.36.0",
+    "ts-jest": "27.0.0",
+    "typescript": "4.1.6"
+  },
+  "scripts": {
+    "test": "jest --coverage --runInBand",
+    "debug": "rm -rf dist && rm -rf test/dist && rollup -c && npm link",
+    "release": "rm -rf dist && rm -rf test/dist && rollup -c --mode=production",
+    "prepublishOnly": "npm install && npm run release"
+  },
+  "dependencies": {
+    "express": "4.21.2",
+    "http-status-codes": "2.3.0"
+  }
+}
