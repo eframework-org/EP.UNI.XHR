@@ -8,14 +8,10 @@ import { BodyInit, parseUrl, XMLHttpRequestBase, XMLHttpRequestMethod, XMLHttpRe
 import { IURL } from "../Base"
 
 /**
- * XMLHttpRequest class for Unity environment.
- *
  * Unity环境下的XMLHttpRequest类。
  */
 export class XMLHttpRequest extends XMLHttpRequestBase {
     /**
-     * The URL of the request.
-     *
      * 请求的URL。
      */
     public get url(): Readonly<IURL> { return this.$url }
@@ -31,22 +27,18 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     private $internalResponsHeaders: CS.System.Collections.Generic.Dictionary$2<string, string>
 
     /**
-     * Gets the status code of the request.
-     *
      * 获取请求的状态码。
      * 
-     * @returns status code; 状态码。
+     * @returns 状态码。
      */
     get status(): number {
         return this.$status
     }
 
     /**
-     * Gets the URL of the response.
-     *
      * 获取响应的URL。
      * 
-     * @returns response URL; 响应的URL。
+     * @returns 响应的URL。
      */
     get responseURL(): string {
         if (this.url) return this.url.url
@@ -54,22 +46,18 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Gets the response as XML.
-     *
      * 获取响应的XML。
      * 
-     * @returns response XML; 响应的XML。
+     * @returns 响应的XML。
      */
     get responseXML(): string {
         return this.responseText
     }
 
     /**
-     * Gets the response as text.
-     *
      * 获取响应的文本。
      * 
-     * @returns response text; 响应的文本。
+     * @returns 响应的文本。
      */
     get responseText(): string {
         if (this.$unityRequest && this.$unityRequest.downloadHandler) {
@@ -79,11 +67,9 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Gets all response headers.
-     *
      * 获取所有响应头。
      * 
-     * @returns all response headers; 所有响应头。
+     * @returns 所有响应头。
      */
     getAllResponseHeaders(): string {
         let text = ""
@@ -97,12 +83,10 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Gets the response header with the specified name.
-     *
      * 获取指定名称的响应头。
      * 
-     * @param name name of the response header; 响应头的名称。
-     * @returns response header value; 响应头的值。
+     * @param name 响应头的名称。
+     * @returns 响应头的值。
      */
     getResponseHeader(name: string): string {
         if (this.$internalResponsHeaders) {
@@ -114,8 +98,6 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Initializes a new instance of the XMLHttpRequest class.
-     *
      * 初始化一个新的XMLHttpRequest类实例。
      */
     constructor() {
@@ -123,15 +105,13 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Initializes a request.
-     *
      * 初始化请求。
      * 
-     * @param method HTTP method to use, e.g., "GET", "POST", "PUT", "DELETE"; 使用的HTTP方法，例如 "GET", "POST", "PUT", "DELETE" 等。
-     * @param url URL to send the request to; 发送请求的URL。
-     * @param async optional boolean parameter, default is true, indicating whether to execute the operation asynchronously; 一个可选的布尔参数，默认为 true，表示是否异步执行操作。
-     * @param username optional username for authentication; 一个可选的用户名，用于身份验证。
-     * @param password optional password for authentication; 一个可选的密码，用于身份验证。
+     * @param method 使用的HTTP方法，例如 "GET"、"POST"、"PUT"、"DELETE" 等。
+     * @param url 发送请求的URL。
+     * @param async 一个可选的布尔参数，默认为 true，表示是否异步执行操作。
+     * @param username 一个可选的用户名，用于身份验证。
+     * @param password 一个可选的密码，用于身份验证。
      */
     open(method: XMLHttpRequestMethod, url: string, async?: boolean, username?: string | null, password?: string | null): void {
         this.$url = parseUrl(url)
@@ -144,11 +124,9 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Sends the request.
-     *
      * 发送请求。
      * 
-     * @param body request body, can be a string, FormData, Blob, etc.; 请求的主体，可以是字符串、FormData、Blob 等。
+     * @param body 请求的主体，可以是字符串、FormData、Blob 等。
      */
     send(body?: BodyInit | null): void {
         const requestBody = body
@@ -184,8 +162,6 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Aborts the request.
-     *
      * 终止请求。
      */
     abort(): void {
@@ -197,11 +173,9 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Returns the progress event initialization object.
-     *
      * 返回进度事件初始化对象。
      * 
-     * @returns progress event initialization object; 进度事件初始化对象。
+     * @returns 进度事件初始化对象。
      */
     protected $get_progress(): ProgressEventInit {
         return {
@@ -212,8 +186,6 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Polling function to check the status of the request.
-     *
      * 轮询函数，用于检查请求的状态。
      */
     public $tick() {
@@ -257,8 +229,6 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Handles the completion of the request.
-     *
      * 处理请求完成。
      */
     private $finished_load() {
@@ -280,8 +250,6 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Processes the response based on the response type.
-     *
      * 根据响应类型处理响应。
      */
     protected $process_response() {
@@ -325,11 +293,9 @@ export class XMLHttpRequest extends XMLHttpRequestBase {
     }
 
     /**
-     * Initializes the custom XMLHttpRequest and replaces the global XMLHttpRequest.
-     *
      * 初始化自定义的 XMLHttpRequest 并替换全局的 XMLHttpRequest。
      * 
-     * @param pollInterval polling interval time; 轮询间隔时间。
+     * @param pollInterval 轮询间隔时间。
      */
     public static Initialize(pollInterval?: number) {
         if (pollInterval != null) XMLHttpRequestBase.$pollInterval = pollInterval
