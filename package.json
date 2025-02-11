@@ -51,7 +51,7 @@
     "@types/jest": "27.5.2",
     "@types/node": "16.11.7",
     "@types/url-parse": "1.4.11",
-    "ep.uni.util": "0.0.2",
+    "ep.uni.util": "0.0.4",
     "jest": "27.2.0",
     "rollup": "2.79.1",
     "rollup-plugin-dts": "4.2.3",
