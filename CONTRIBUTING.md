@@ -55,8 +55,7 @@
 
 ### 3. 测试目录
 - test/：测试目录
-  - Unity.Test.ts：Unity 测试
-  - Unreal.Test.ts：Unreal 测试
+  - *.Test.ts：测试文件
   - log/：测试日志
 
 ### 4. 配置目录
@@ -66,12 +65,7 @@
 - .github/：GitHub 配置
   - workflows/：工作流配置
 
-### 5. 测试目录
-- test/：测试目录
-  - *.Test.ts：测试文件
-  - log/：测试日志
-
-### 6. 根目录文件
+### 5. 根目录文件
 - package.json：项目配置
 - tsconfig.json：TypeScript 配置
 - rollup.config.js：打包配置
@@ -82,7 +76,7 @@
 - LICENSE：许可证声明
 - .gitignore：Git 忽略配置
 
-### 7. 自动生成目录
+### 6. 自动生成目录
 - node_modules/：依赖目录
 - dist/：构建输出
 - test/log/：测试日志
