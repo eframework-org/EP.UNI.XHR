@@ -7,15 +7,15 @@ UNI.XHR 是一个跨平台的 XMLHttpRequest 实现库，专注于为 Puerts 提
 
 ## 功能特性
 
-- 🚀 **跨平台**: 统一的 XMLHttpRequest API 在不同环境下保持一致的行为
-- 📦 **标准兼容**: 完整实现 XMLHttpRequest Level 2 标准
-- 🔧 **类型安全**: 完整的 TypeScript 类型定义
-- 🧪 **测试覆盖**: 完整的单元测试和集成测试
+- 🚀 **跨平台**：统一的 XMLHttpRequest API 在不同环境下保持一致的行为
+- 📦 **标准兼容**：完整实现 XMLHttpRequest Level 2 标准
+- 🔧 **类型安全**：完整的 TypeScript 类型定义
+- 🧪 **测试覆盖**：完整的单元测试和集成测试
 
 ### 核心功能
 
-- **Unity XMLHttpRequest**: 基于 UnityWebRequest 实现的完整 XMLHttpRequest 接口
-- **Unreal XMLHttpRequest**: 基于 Unreal HTTP 模块实现的 XMLHttpRequest 接口 
+- **Unity XMLHttpRequest**：基于 UnityWebRequest 实现的完整 XMLHttpRequest 接口
+- **Unreal XMLHttpRequest**：基于 Unreal HTTP 模块实现的 XMLHttpRequest 接口 
 
 ### 平台支持
 
