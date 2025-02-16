@@ -1,7 +1,7 @@
 {
   "name": "ep.uni.xhr",
   "displayName": "EP.UNI.XHR",
-  "description": "UNI.XHR 是一个跨平台的 XMLHttpRequest 实现库，专注于为 Puerts 提供统一的 HTTP 请求接口，支持在 Unity、Unreal 等多种环境下运行。",
+  "description": "UNI.XHR 类库提供了跨平台的 XMLHttpRequest 标准实现，为 Puerts 引擎提供统一的 HTTP 网络请求接口，可运行于 Unity、Unreal 等多个游戏引擎环境中。",
   "version": "0.0.2",
   "author": "eframework-org",
   "homepage": "https://github.com/eframework-org",
