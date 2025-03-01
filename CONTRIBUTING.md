@@ -123,7 +123,7 @@
 - 类名：使用 PascalCase
 - 函数名：使用 PascalCase
 - 变量名：使用 camelCase
-- 常量名：使用 UPPER_CASE
+- 常量名：使用 PascalCase
 - 文件名：使用 PascalCase
 
 ### 3. 注释规范
@@ -274,7 +274,7 @@ Closes #123
 ### 3. 发布步骤
 - 更新版本号：`npm version patch/minor/major`
 - 构建发布包：`npm run release`
-- 发布到商店：Run workflow [Publish](.github/workflows/publish.yml)
+- 发布到商店：Run workflow [Publish](https://github.com/eframework-org/EP.UNI.XHR/actions/workflows/publish.yml)
 
 ## 相关链接
 
@@ -308,7 +308,7 @@ Closes #123
 ### 环境信息
 - Node.js 版本：如 16.11.7
 - 操作系统：如 Windows 11
-- 工具版本：如 0.0.1
+- 类库版本：如 0.0.1
 ```
 
 ## 许可证
